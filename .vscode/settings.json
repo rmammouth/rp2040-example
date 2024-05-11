@@ -9,6 +9,7 @@
   "rust-analyzer.check.noDefaultFeatures": true,
   "rust-analyzer.cargo.noDefaultFeatures": true,
   "rust-analyzer.showUnlinkedFileNotification": false,
-  // uncomment the target of your chip.
-  "rust-analyzer.cargo.target": "thumbv6m-none-eabi"
+  "rust-analyzer.cargo.target": "thumbv6m-none-eabi",
+  "probe-rs-chip": "RP2040", // CONFIGURE: Replace with probe-rs supported CHIP name
+  "probe-rs-profile": "debug-no-opt"
 }

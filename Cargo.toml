@@ -48,3 +48,8 @@ log = "0.4"
 pio-proc = "0.2"
 pio = "0.2.1"
 rand = { version = "0.8.5", default-features = false }
+
+[profile.debug-no-opt]
+inherits = "dev"
+opt-level = 0    # default is 0, and 1 = basic optimizations.
+lto = "off"      # Link Time Optimizations

@@ -1,0 +1,29 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "probe-rs-debugger-test",
+      "type": "process",
+      "command": "cargo",
+      // Do not edit these args. They are set by the workspace settings.
+      "args": [
+        "build",
+        "--bin",
+        "${workspaceFolderBasename}",
+        "--profile",
+        "${config:probe-rs-profile}",
+        "--target",
+        "${config:rust-analyzer.cargo.target}",
+        "--features",
+        "${config:rust-analyzer.cargo.features}"
+      ],
+      "problemMatcher": ["$rustc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }    
+    }
+  ]
+}
